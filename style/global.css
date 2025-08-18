@@ -20,6 +20,8 @@
   --text: 16px var(--font-family);
   --text-md: 14px/170% var(--font-family);
   --text-sm: 12px/170% var(--font-family);
+
+  --text-mobile: bold 24px/125% var(--font-family); 
 }
 body {
   background-color: var(--background-color);

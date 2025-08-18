@@ -1,10 +1,10 @@
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 20px;
 }
-nav ul{
+nav ul {
   list-style: none;
   display: flex;
   align-items: center;
@@ -13,13 +13,29 @@ nav ul{
 }
 
 nav ul li:last-child img {
-width: 40px;
-height: 40px;
-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.conteiner{
+.conteiner {
   padding-inline: 32px;
   max-width: 1280px;
   margin-inline: auto;
+}
+
+@media (width < 80em) {
+  .conteiner {
+    --max-width: 375px;
+    width: min(var(--max-width), 100%);
+    margin-inline: auto;
+  }
+  nav.conteiner {
+      padding: 1rem;
+    }
+  nav {
+    & li:not(:has(img)) {
+      display: none;
+    }
+  }
 }

@@ -7,3 +7,18 @@ footer div{
   display: flex;
   gap: 24px;
 }
+@media (width < 80em) {
+  footer{
+    gap: 1rem;
+    padding-block: 1rem;
+    flex-direction: column;
+    & > span {
+      text-align: center;
+    }
+    & div {
+      justify-content: center;
+    }
+
+  }
+  
+}

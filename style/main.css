@@ -1,12 +1,23 @@
-main{
-  display: flex;
-  flex-wrap: wrap;
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   padding-block: 24px;
 }
 
-main img{
+main img {
   width: 286px;
   height: 286px;
   object-fit: cover;
+}
+
+@media (width < 80em) {
+  main{
+    padding-block: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    & img {
+      width:100%;
+    }
+  }
 }
