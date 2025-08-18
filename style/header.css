@@ -4,7 +4,6 @@ header {
   justify-content: space-between;
   align-items: center;
   font: var(--text-md);
-  
 }
 
 #profile {
@@ -34,6 +33,10 @@ header {
     & #profile {
       margin-bottom: 2rem;
     }
+
+    &.conteiner{
+      padding-top: 1rem;
+    }
   }
 
   #profile {
@@ -45,7 +48,9 @@ header {
     & img {
       width: 120px;
     }
+
   }
+
 }
 
 #info {
