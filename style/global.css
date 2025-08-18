@@ -24,7 +24,7 @@
   --text-mobile: bold 24px/125% var(--font-family); 
 }
 body {
-  background-color: var(--background-color);
+  
   color: var(--text-color-secondary);
 }
 
