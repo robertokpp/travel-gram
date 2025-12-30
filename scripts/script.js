@@ -4,7 +4,6 @@ const lightboxContent = document.querySelector(".lightbox-content");
 const galleryImg = gallery.querySelectorAll("img");
 const btnClose = document.getElementById("btn-close");
 const amountImg = document.getElementById("amount-img");
-let i = 0;
 
 
 galleryImg.forEach((element) => {

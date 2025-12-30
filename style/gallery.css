@@ -4,6 +4,9 @@
   gap: 8px;
   padding-block: 8px;
   background-color: var(--background-color);
+  p{
+    display: none;
+  }
 }
 
 #gallery img {
@@ -29,4 +32,6 @@
   #gallery.conteiner {
     padding-inline: 1rem;
   }
+
+  
 }
