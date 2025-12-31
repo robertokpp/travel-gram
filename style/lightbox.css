@@ -12,12 +12,80 @@
     align-items: center;
   }
   & .descrition {
-    width: 20%;
-    background-color: blue;
+    width: 30%;
+    background-color: transparent;
     height: 645px;
-    & p{
-      color: white;
-      padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .descrition-header {
+      display: flex;
+      flex-direction: column;
+      padding-block:initial;
+      gap: 1rem;
+      align-items: initial;
+      & .profile {
+        gap: 0.5rem;
+        align-items: initial;
+        & spam {
+          color: white;
+          font: var(--text-sm);
+          font-weight: 600;
+        }
+
+        & img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      & p {
+        color: white;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+    }
+
+    & .descrition-comment {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 10px;
+      }
+      button {
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+        background-color: white;
+        cursor: pointer;
+      }
+    }
+
+    & .descrition-lc{
+      padding-inline: 2rem;
+      li{
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        color: white;
+        margin-bottom: 1rem;
+        & img{
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+        }
+        & span{
+          color: gray;
+          font: var(--font-family);
+          font-size: x-small;
+          padding-top: 5px;
+        }
+      }
     }
   }
 
@@ -31,7 +99,7 @@
   }
 
   & a:hover {
-    color: rgb(247, 64, 64);
+    color: #ef5f4c;
   }
 }
 

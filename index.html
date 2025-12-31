@@ -40,11 +40,17 @@
         </ul>
       </nav>
 
-      <header class="conteiner">
-        <div id="profile">
-          <img src="assent/imagens/teste.JPEG" alt="imagen de perfil" />
+      <header id="header-profile" class="conteiner">
+        <div class="profile">
+          <div class="avatar-profile">
+            <img
+              class="img-profile"
+              src="assent/imagens/teste.JPEG"
+              alt="imagen de perfil"
+            />
+          </div>
           <div>
-            <h1>Maria Flores</h1>
+            <spam class="name-profile">Maria Flores</spam>
             <p>
               Amante de viagens, cultura e gastronomia. 🌍✈️<br />
               Aqui compartilho as histórias registradas em cada clique,
@@ -73,35 +79,96 @@
       </header>
 
       <div class="conteiner" id="gallery">
-        <div>
+        <div class="gallery-item">
+          <div class="gallery-lightbox">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
           <img src="assent/imagens/Image 01.png" alt="img1" />
-          <p>O silêncio aqui não era vazio. Era cheio. O barco cortava a água devagar, e eu sentia que cada remada empurrava também os meus pensamentos para longe. As montanhas pareciam vigias antigas, imóveis, enquanto eu respirava fundo e entendia que paz não precisa de palavras.</p>
         </div>
-        <img src="assent/imagens/Image 02.png" alt="img2" />
-        <img src="assent/imagens/Image 03.png" alt="img3" />
-        <img src="assent/imagens/Image 04.png" alt="img4" />
-        <img src="assent/imagens/Image 05.png" alt="img5" />
-        <img src="assent/imagens/Image 06.png" alt="img6" />
-        <img src="assent/imagens/Image 07.png" alt="img7" />
-        <img src="assent/imagens/Image 08.png" alt="img8" />
-        <img src="assent/imagens/Image 09.png" alt="img9" />
-        <img src="assent/imagens/Image 10.png" alt="img10" />
-        <img src="assent/imagens/Image 11.png" alt="img11" />
-        <img src="assent/imagens/Image 12.png" alt="img12" />
-        
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 02.png" alt="img2" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 03.png" alt="img3" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 04.png" alt="img4" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 05.png" alt="img5" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 06.png" alt="img6" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 07.png" alt="img7" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 08.png" alt="img8" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 09.png" alt="img9" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 10.png" alt="img10" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 11.png" alt="img11" />
+        </div>
+        <div class="gallery-item">
+          <img src="assent/imagens/Image 12.png" alt="img12" />
+        </div>
+      </div>
+
+      <div class="lightbox">
+        <div class="lightbox-content">
+          <img alt="imagem ampliada" />
+          <a id="btn-close">
+            <i class="bi bi-x-circle"></i>
+          </a>
+
+          <div class="descrition">
+            <header class="descrition-header">
+              <div class="profile">
+                <img src="assent/imagens/teste.JPEG" alt="imagen de perfil" />
+                <spam class="name-profile">Maria Flores</spam>
+              </div>
+              <p>
+                O silêncio aqui não era vazio. Era cheio. O barco cortava a água
+                devagar, e eu sentia que cada remada empurrava também os meus
+                pensamentos para longe. As montanhas pareciam vigias antigas,
+                imóveis, enquanto eu respirava fundo e entendia que paz não
+                precisa de palavras.
+              </p>
+            </header>
+
+            <ul class="descrition-lc">
+              <li>
+                <img src="assent/Profile pic.jpg" alt="" />
+                <div>
+                  <p>Jantar à beira da água em Veneza é outro nível. O som dos canais, a comida impecável e o tempo simplesmente desacelera.</p>
+                  <span>31/12/2025 - 16:40</span>
+                </div>
+              </li>
+               <li>
+                <img src="assent/Profile pic.jpg" alt="" />
+                <div>
+                  <p>Esse lugar prova que comer bem também é sobre o cenário. Mesa nas margens do canal, luz suave e uma experiência inesquecível.</p>
+                  <span>31/12/2025 - 16:41</span>
+                </div>
+              </li>
+             
+            </ul>
+
+            <div class="descrition-comment">
+              <input type="text" name="commet" id="commet" />
+              <button>Comentar</button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
-    <div class="lightbox">
-      <div class="lightbox-content">
-        <img alt="imagem ampliada" />
-        <a id="btn-close">
-          <i class="bi bi-x-circle"></i>
-        </a>
-        <div class="descrition">
-          <p>O silêncio aqui não era vazio. Era cheio. O barco cortava a água devagar, e eu sentia que cada remada empurrava também os meus pensamentos para longe. As montanhas pareciam vigias antigas, imóveis, enquanto eu respirava fundo e entendia que paz não precisa de palavras.</p>
-        </div>
-      </div>
-    </div>
     <footer class="conteiner">
       <span>Travelgram © 2024</span>
       <div>

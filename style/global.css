@@ -24,8 +24,12 @@
   --text-mobile: bold 24px/125% var(--font-family); 
 }
 body {
-  
   color: var(--text-color-secondary);
+}
+
+p{
+  font: var(--text-sm);
+  
 }
 
 a{ 
