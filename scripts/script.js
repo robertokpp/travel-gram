@@ -16,7 +16,6 @@ function openLightBox(params) {
 function leftRight(params) {
   arrowLeft.style.display = "initial";
   arrowRight.style.display = "initial";
-  let count = params;
   if (params === 0) {
     arrowLeft.style.display = "none";
   } else if (galleryItem.length - 1 === params) {
@@ -24,26 +23,25 @@ function leftRight(params) {
   }
 
   arrowLeft.addEventListener("click", () => {
-    count--;
-    
-    if (count === 0){
+    params--;
+    if (params === 0){
       arrowLeft.style.display = "none";
-      openLightBox(galleryItem[count])
+      openLightBox(galleryItem[params])
       return
     } else{
-      openLightBox(galleryItem[count])
+      openLightBox(galleryItem[params])
       arrowRight.style.display = "initial";
     }
   });
 
   arrowRight.addEventListener("click", () => {
-    count ++
-       if (count === galleryItem.length - 1){
+    params ++
+       if (params === galleryItem.length - 1){
       arrowRight.style.display = "none";
-      openLightBox(galleryItem[count])
+      openLightBox(galleryItem[params])
       return
     } else{
-      openLightBox(galleryItem[count])
+      openLightBox(galleryItem[params])
       arrowLeft.style.display = "initial";
     }
   });
@@ -55,9 +53,6 @@ galleryItem.forEach((element, index) => {
     leftRight(index);
   });
 });
-
-
-
 
 
 
