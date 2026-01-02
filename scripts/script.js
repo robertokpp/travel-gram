@@ -1,33 +1,65 @@
 const gallery = document.querySelector("#gallery");
+const galleryItem = gallery.querySelectorAll(".gallery-item");
 const lightbox = document.querySelector(".lightbox");
 const lightboxContent = document.querySelector(".lightbox-content");
 const btnClose = document.getElementById("btn-close");
-const amountImg = document.getElementById("amount-img");
+const arrowLeft = document.querySelector("#arrow-left");
+const arrowRight = document.querySelector("#arrow-right");
 
-//metodo antigo do lightbox
-const galleryImg = gallery.querySelectorAll("img");
-galleryImg.forEach((element) => {
-  amountImg.textContent = `${galleryImg.length} Fotos`;
+function openLightBox(params) {
+  const galleryImgSrc = params.querySelector("img").getAttribute("src");
+  const lightboxImgSrc = document.querySelector("#lightbox-img");
+  lightboxImgSrc.setAttribute("src", galleryImgSrc);
+  lightbox.style.display = "flex";
+}
 
+function leftRight(params) {
+  arrowLeft.style.display = "initial";
+  arrowRight.style.display = "initial";
+  let count = params;
+  if (params === 0) {
+    arrowLeft.style.display = "none";
+  } else if (galleryItem.length - 1 === params) {
+    arrowRight.style.display = "none";
+  }
+
+  arrowLeft.addEventListener("click", () => {
+    count--;
+    
+    if (count === 0){
+      arrowLeft.style.display = "none";
+      openLightBox(galleryItem[count])
+      return
+    } else{
+      openLightBox(galleryItem[count])
+      arrowRight.style.display = "initial";
+    }
+  });
+
+  arrowRight.addEventListener("click", () => {
+    count ++
+       if (count === galleryItem.length - 1){
+      arrowRight.style.display = "none";
+      openLightBox(galleryItem[count])
+      return
+    } else{
+      openLightBox(galleryItem[count])
+      arrowLeft.style.display = "initial";
+    }
+  });
+}
+
+galleryItem.forEach((element, index) => {
   element.addEventListener("click", () => {
-    const srcImg = element.getAttribute("src");
-    const lightboxImg = lightboxContent.querySelector("img");
-    lightboxImg.setAttribute("src", srcImg);
-    lightbox.style.display = "flex";
+    openLightBox(element);
+    leftRight(index);
   });
 });
 
 
-const galleryItem = gallery.querySelectorAll(".gallery-item");
-galleryItem.forEach((element) => {
-  
-  element.addEventListener("click", () => {
-    const galleryLightbox = element.querySelector(".gallery-lightbox")
-    console.log(galleryLightbox)
-  });
 
 
-});
+
 
 btnClose.addEventListener("click", () => {
   lightbox.style.display = "none";

@@ -64,6 +64,9 @@
         background-color: white;
         cursor: pointer;
       }
+      button:hover {
+        background-color: #ef5f4c;
+      }
     }
 
     & .descrition-lc{
@@ -89,7 +92,7 @@
     }
   }
 
-  & a {
+  & #btn-close {
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -98,10 +101,23 @@
     cursor: pointer;
   }
 
-  & a:hover {
+  & #btn-close:hover {
     color: #ef5f4c;
   }
+
+  & #arrow-left,#arrow-right{
+    font-size: 3rem;
+    padding: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  & #arrow-left:hover,#arrow-right:hover{
+    color: #ef5f4c;
+  }
+
 }
+
+
 
 @media (width < 80em) {
   & .lightbox {
