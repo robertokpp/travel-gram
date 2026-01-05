@@ -5,6 +5,7 @@ const lightboxContent = document.querySelector(".lightbox-content");
 const btnClose = document.getElementById("btn-close");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
+const amountImg = document.querySelector("#amount-img")
 
 function openLightBox(params) {
   const galleryImgSrc = params.querySelector("img").getAttribute("src");
@@ -14,35 +15,23 @@ function openLightBox(params) {
 }
 
 function leftRight(params) {
-  arrowLeft.style.display = "initial";
-  arrowRight.style.display = "initial";
-  if (params === 0) {
-    arrowLeft.style.display = "none";
-  } else if (galleryItem.length - 1 === params) {
-    arrowRight.style.display = "none";
-  }
-
   arrowLeft.addEventListener("click", () => {
-    params--;
-    if (params === 0){
-      arrowLeft.style.display = "none";
-      openLightBox(galleryItem[params])
-      return
-    } else{
-      openLightBox(galleryItem[params])
-      arrowRight.style.display = "initial";
+    arrowRight.style.cursor = "pointer";
+    if (params > 0) {
+      params--;
+      openLightBox(galleryItem[params]);
+    } else {
+      arrowLeft.style.cursor = "not-allowed";
     }
   });
 
   arrowRight.addEventListener("click", () => {
-    params ++
-       if (params === galleryItem.length - 1){
-      arrowRight.style.display = "none";
-      openLightBox(galleryItem[params])
-      return
+    arrowLeft.style.cursor = "pointer";
+    if (params < galleryItem.length - 1) {
+      params++;
+      openLightBox(galleryItem[params]);
     } else{
-      openLightBox(galleryItem[params])
-      arrowLeft.style.display = "initial";
+      arrowRight.style.cursor = "not-allowed";
     }
   });
 }
@@ -52,9 +41,10 @@ galleryItem.forEach((element, index) => {
     openLightBox(element);
     leftRight(index);
   });
+  
 });
 
-
+amountImg.textContent = galleryItem.length + " Fotos"
 
 btnClose.addEventListener("click", () => {
   lightbox.style.display = "none";
