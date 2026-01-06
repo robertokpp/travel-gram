@@ -33,11 +33,13 @@ header {
     flex-direction: column;
     align-items: start;
     gap: 1rem;
-    & #profile {
+    & .profile {
       margin-bottom: 2rem;
+
+      flex-direction: column;
     }
 
-    &.conteiner{
+    &.conteiner {
       padding-top: 1rem;
     }
   }
@@ -53,9 +55,7 @@ header {
       height: 120px;
       object-fit: cover;
     }
-
   }
-
 }
 
 #info {
@@ -74,8 +74,3 @@ header {
   align-items: center;
   gap: 8px;
 }
-
-
-
-
-

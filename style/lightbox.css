@@ -22,7 +22,7 @@
     .descrition-header {
       display: flex;
       flex-direction: column;
-      padding-block:initial;
+      padding-block: initial;
       gap: 1rem;
       align-items: initial;
       & .profile {
@@ -51,38 +51,38 @@
       display: flex;
       gap: 1rem;
       margin-top: auto;
-      input {
+      & input {
         width: 100%;
         padding: 0.5rem;
         border: none;
         border-radius: 10px;
       }
-      button {
+      & button {
         border: none;
         border-radius: 10px;
         padding: 0.5rem;
         background-color: white;
         cursor: pointer;
       }
-      button:hover {
+      & button:hover {
         background-color: #ef5f4c;
       }
     }
 
-    & .descrition-lc{
+    & .descrition-lc {
       padding-inline: 2rem;
-      li{
+      & li {
         list-style: none;
         display: flex;
         gap: 1rem;
         color: white;
         margin-bottom: 1rem;
-        & img{
+        & img {
           width: 2rem;
           height: 2rem;
           border-radius: 50%;
         }
-        & span{
+        & span {
           color: gray;
           font: var(--font-family);
           font-size: x-small;
@@ -105,30 +105,56 @@
     color: #ef5f4c;
   }
 
-  & #arrow-left,#arrow-right{
+  & #arrow-left,
+  #arrow-right {
     font-size: 3rem;
     padding: 2rem;
     color: white;
     cursor: pointer;
   }
-  & #arrow-left:hover,#arrow-right:hover{
+  & #arrow-left:hover,
+  #arrow-right:hover {
     color: #ef5f4c;
   }
-
 }
 
-
-
 @media (width < 80em) {
-  & .lightbox {
-    padding: 1rem;
-    & img {
-      width: 100%;
+  .lightbox {
+    overflow-y: auto; /*ok*/
+    padding-bottom: 2rem;
+    & .lightbox-content {
+      flex-direction: column; /*ok*/
+      #lightbox-img {
+        width: 100%; /*ok*/
+      }
+    }
+    & .descrition {
+      width: 100%; /*ok*/
+      padding: 0; /*ok*/
+      height: auto; /*ok*/
+      .descrition-header {
+        gap: 0rem; /*ok*/
+        & .profile {
+          gap: 0.5rem; /*ok*/
+          align-items: center; /*ok*/
+          flex-direction: row; /*ok*/
+          margin-bottom: initial; /*ok*/
+          padding-block: 1rem 0.5rem; /*ok*/
+        }
+        & p {
+          padding: 0.5rem; /*ok*/
+        }
+      }
     }
 
-    & a {
-      top: 1rem;
-      right: 1rem;
+    & #btn-close {
+      font-size: 1rem;
+    }
+
+    & #arrow-left,
+    #arrow-right {
+      font-size: 1rem;
+      padding: 0.2rem;
     }
   }
 }
