@@ -36,10 +36,7 @@ a{
   color: inherit;
 }
 
-a:hover{
-  color: var(--brand-color);
-  text-decoration: underline;
-}
+
 
 .bg-surface-color{
   background-color: var(--surface-color);
