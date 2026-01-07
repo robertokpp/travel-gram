@@ -49,3 +49,4 @@ amountImg.textContent = galleryItem.length + " Fotos"
 btnClose.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
+
