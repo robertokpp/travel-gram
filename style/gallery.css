@@ -23,17 +23,16 @@
 .gallery-content{
   position: relative;
 }
+
 .gallery-lightbox{
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0.5rem;
+  bottom: 0.5rem;
+  right: .5rem;
   transition: .3s ease-in-out;
  & i{
     color: #0000009d;
     font-size: 1.5rem;
     cursor: pointer;
-
   }
 }
 
